@@ -1,0 +1,13 @@
+:root {
+    --Azure: #029FFC;
+    --BluishWhite: #89D3FF;
+}
+
+body {
+    width: 100dvw;
+    height: 100dvh;
+    background: linear-gradient(180deg, var(--Azure), var(--BluishWhite));
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}

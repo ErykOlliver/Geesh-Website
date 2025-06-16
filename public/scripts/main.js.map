@@ -1,0 +1,1 @@
+{"version":3,"file":"main.js","mappings":"AAAWA,SAASC,cAAc","sources":["webpack://geesh-website/./src/scripts/index.js"],"sourcesContent":["const El = document.querySelector('.el')"],"names":["document","querySelector"],"sourceRoot":""}
