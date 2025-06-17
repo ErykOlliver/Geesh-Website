@@ -5,16 +5,49 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./src/style/index.css">
+    <link rel="stylesheet" href="./public/style/output.css">
     <link rel="shortcut icon" href="./src/img/GeeshIcon.png" type="image/x-icon">
     <script src="./public/scripts/main.js" defer></script>
     <title>Geesh</title>
 </head>
 
 <body>
-    <section id="container">
-        <div class="titlePlace">
-
-        </div>
+    <div class="brushs">
+        
+    </div>
+    <section id="container" class="">
+        <header class="w-full h-fit flex justify-center gap-5 items-center flex-col mt-5">
+            <div class="titlePlace flex flex-col gap-1 w-fit h-fit items-center justify-center">
+                <img class="w-5 h-6" src="./src/img/GeeshIcon.png" alt="">
+                <h1 id="GeeshName" class="text-6xl font-black text-white">Geesh</h1>
+                <hr class=" w-full text-white">
+                <p class="uppercase text-center text-white">seu gerenciador de energias renovaveis</p>
+            </div>
+            <div class="SocialPlace w-full h-fit gap-4 flex items-center justify-center">
+                <a href="#"
+                    class="generic_button w-52 h-16 rounded-2xl text-2xl pl-5 pr-5 pb-1.5 pt-1.5 shadow-md transition-all duration-200">
+                    Equipe</a>
+                <a href="#"
+                    class="generic_button w-80 h-24 rounded-2xl text-4xl pl-5 pr-5 pb-1.5 pt-1.5 shadow-md transition-all duration-200">
+                    Baixar</a>
+                <a href="#"
+                    class="generic_button w-52 h-16 rounded-2xl text-2xl pl-5 pr-5 pb-1.5 pt-1.5 shadow-md transition-all duration-200">
+                    Instagram</a>
+            </div>
+        </header>
+        <section class="aboutGrid w-full h-full gap-4 flex justify-center items-center ">
+            <div class="Item w-96 h-96 flex flex-col rounded-3xl justify-start items-center">
+                <div class="imgPlace w-96 h-44 pl-1.5 pr-1.5 ">
+                    <img src="./src/img/one.jpg" class="w-full h-full rounded-2xl shadow-inner" alt="">
+                </div>
+                <div class="textPlace w-full h-full items-center flex justify-center flex-col gap-2">
+                    <h3 class="itemTitle text-xl">Monitoramento em Tempo Real</h3>
+                    <p class="itemDesc text-lg">Veja quanto entra e sai de energia, em tempo real, com gráficos simples e dados
+                        atualizados a
+                        todo momento.</p>
+                </div>
+            </div>
+        </section>
     </section>
 </body>
 
