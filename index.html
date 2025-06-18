@@ -7,26 +7,31 @@
     <link rel="stylesheet" href="./src/style/index.css">
     <link rel="stylesheet" href="./public/style/output.css">
     <link rel="shortcut icon" href="./src/img/GeeshIcon.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.hugeicons.com/font/hgi-stroke-rounded.css" />
     <script src="./public/scripts/main.js" defer></script>
     <title>Geesh</title>
 </head>
 
 <body>
-    <div class="brushs">
-        
-    </div>
+    <img id="Element1" class="Brushs" src="./src/img/Brushs/MultiCircle.png" alt="">
+    <img id="Element2" class="Brushs" src="./src/img/Brushs/RoundedLines.png" alt="">
+    <img id="Element3" class="Brushs" src="./src/img/Brushs/Circle.png" alt="">
+    <img id="Element4" class="Brushs" src="./src/img/Brushs/Circle2.png" alt="">
+    <img id="Element5" class="Brushs" src="./src/img/Brushs/MultiCircle2.png" alt="">
+
+    <div class="team bg-[#f9f9f9] w-1/2 h-2/3 rounded-xl shadow-xl" id="TeamContainer"></div>
     <section id="container" class="">
         <header class="w-full h-fit flex justify-center gap-5 items-center flex-col mt-5">
             <div class="titlePlace flex flex-col gap-1 w-fit h-fit items-center justify-center">
                 <img class="w-5 h-6" src="./src/img/GeeshIcon.png" alt="">
                 <h1 id="GeeshName" class="text-6xl font-black text-white">Geesh</h1>
                 <hr class=" w-full text-white">
-                <p class="uppercase text-center text-white">seu gerenciador de energias renovaveis</p>
+                <p class="subTitle uppercase text-center text-white">Seu Gerenciador de Energias Renováveis.</p>
             </div>
             <div class="SocialPlace w-full h-fit gap-4 flex items-center justify-center">
-                <a href="#"
+                <a id="Teambtn"
                     class="generic_button w-52 h-16 rounded-2xl text-2xl pl-5 pr-5 pb-1.5 pt-1.5 shadow-md transition-all duration-200">
-                    Equipe</a>
+                    Sobre</a>
                 <a href="#"
                     class="generic_button w-80 h-24 rounded-2xl text-4xl pl-5 pr-5 pb-1.5 pt-1.5 shadow-md transition-all duration-200">
                     Baixar</a>
@@ -36,15 +41,167 @@
             </div>
         </header>
         <section class="aboutGrid w-full h-full gap-4 flex justify-center items-center ">
-            <div class="Item w-96 h-96 flex flex-col rounded-3xl justify-start items-center">
-                <div class="imgPlace w-96 h-44 pl-1.5 pr-1.5 ">
-                    <img src="./src/img/one.jpg" class="w-full h-full rounded-2xl shadow-inner" alt="">
+            <div class="Item w-96 h-96 flex flex-col rounded-3xl justify-start items-center relative">
+                <!--Frente-->
+                <div
+                    class="justify-start gap-7 items-center flex flex-col w-full h-full backface-hidden absolute inset-0">
+                    <div class="imgPlace w-full h-44 pl-1.5 pr-1.5 ">
+                        <img src="./src/img/one.jpg" class="w-full h-full rounded-2xl shadow-inner object-cover" alt="">
+                    </div>
+                    <div class="textPlace w-full h-fit items-center flex justify-center flex-col gap-2">
+                        <h3 class="itemTitle text-xl">Monitoramento em Tempo Real</h3>
+                        <p class="itemDesc text-lg text-center">Veja quanto entra e sai de energia, em tempo real, com
+                            gráficos
+                            simples
+                            e dados
+                            atualizados a
+                            todo momento.</p>
+                    </div>
                 </div>
-                <div class="textPlace w-full h-full items-center flex justify-center flex-col gap-2">
-                    <h3 class="itemTitle text-xl">Monitoramento em Tempo Real</h3>
-                    <p class="itemDesc text-lg">Veja quanto entra e sai de energia, em tempo real, com gráficos simples e dados
-                        atualizados a
-                        todo momento.</p>
+                <!--Verso-->
+                <div
+                    class=" justify-start gap-1 items-center flex flex-col w-full h-full backface-hidden rotate-y-180 inset-0 absolute">
+                    <div class="videoPlace w-full h-40 pl-1.5 pr-1.5">
+                        <video src="./src/videos/one.mp4" class="w-full h-full rounded-2xl object-cover shadow-inner"
+                            autoplay muted loop playsinline>></video>
+                    </div>
+                    <div class="textPlace w-full h-full items-start flex justify-center flex-col gap-1">
+                        <div class="q1 p-2 flex flex-col w-full">
+                            <div class="title flex gap-2 items-center">
+                                <i class="hgi hgi-stroke hgi-ease-curve-control-points font-bold text-2xl"></i>
+                                <h3 class="itemTitle text-lg">Controle Total Da Sua Energia</h3>
+                            </div>
+                            <p class="itemDesc text-sm text-left">Acompanhe em tempo real quanto de energia está sendo
+                                gerada,
+                                armazenada e consumida. Tudo em uma interface clara e fácil de entender.</p>
+                        </div>
+                        <div class="q1 p-2 flex flex-col w-full">
+                            <div class="title flex gap-2 items-center">
+                                <i class="hgi hgi-stroke hgi-bubble-chat-question font-bold text-2xl"></i>
+                                <h3 class="itemTitle text-lg">Como funciona o monitoramento?</h3>
+                            </div>
+                            <p class="itemDesc text-sm text-left">O sistema coleta dados diretamente do dispositivo
+                                físico conectado às fontes solar e eólica, e exibe isso instantaneamente no app.</p>
+                        </div>
+                        <div class="q1 p-2 flex flex-col w-full">
+                            <div class="title flex gap-2 items-center">
+                                <i class="hgi hgi-stroke hgi-text-check font-bold text-2xl"></i>
+                                <h3 class="itemTitle text-lg">Você terá acesso a:</h3>
+                            </div>
+                            <ol class="w-full text-left text-sm list-disc pl-4">
+                                <li>Gráficos de entrada e saída por hora/dia/semana</li>
+                                <li>Porcentagem de uso da bateria</li>
+                                <li>Alertas em caso de excesso de consumo</li>
+                                <li>Histórico de consumo</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="Item w-96 h-96 flex flex-col rounded-3xl justify-start items-center relative">
+                <!--Frente-->
+                <div
+                    class="justify-start gap-7 items-center flex flex-col w-full h-full backface-hidden absolute inset-0">
+                    <div class="imgPlace w-full h-44 pl-1.5 pr-1.5 ">
+                        <img src="./src/img/two.jpg" class="w-full h-full rounded-2xl shadow-inner object-cover" alt="">
+                    </div>
+                    <div class="textPlace w-full h-fit items-center flex justify-center flex-col gap-2">
+                        <h3 class="itemTitle text-xl">Acessibilidade Garantida</h3>
+                        <p class="itemDesc text-lg text-center">Interface simples, intuitiva e inclusiva. Qualquer
+                            pessoa consegue usar com facilidade.</p>
+                    </div>
+                </div>
+                <!--Verso-->
+                <div
+                    class=" justify-start gap-1 items-center flex flex-col w-full h-full backface-hidden rotate-y-180 inset-0 absolute">
+                    <div class="videoPlace w-full h-40 pl-1.5 pr-1.5">
+                        <video src="./src/videos/two.mp4" class="w-full h-full rounded-2xl object-cover shadow-inner"
+                            autoplay muted loop playsinline>></video>
+                    </div>
+                    <div class="textPlace w-full h-full items-start flex justify-center flex-col gap-1">
+                        <div class="q1 p-2 flex flex-col w-full">
+                            <div class="title flex gap-2 items-center">
+                                <i class="hgi hgi-stroke hgi-ai-brain-01 font-bold text-2xl"></i>
+                                <h3 class="itemTitle text-lg">Usabilidade Sem Complicação</h3>
+                            </div>
+                            <p class="itemDesc text-sm text-left">Geesh foi pensado para todos: design intuitivo, visual
+                                limpo e ações diretas facilitam o uso mesmo para quem não tem familiaridade com
+                                tecnologia.</p>
+                        </div>
+                        <div class="q1 p-2 flex flex-col w-full">
+                            <div class="title flex gap-2 items-center">
+                                <i class="hgi hgi-stroke hgi-bubble-chat-question font-bold text-2xl"></i>
+                                <h3 class="itemTitle text-lg">Por que isso é importante?</h3>
+                            </div>
+                            <p class="itemDesc text-sm text-left">Nem todo mundo tem facilidade com apps. Pensar em
+                                acessibilidade é garantir que mais pessoas consigam usar a energia renovável de forma
+                                consciente.</p>
+                        </div>
+                        <div class="q1 p-2 flex flex-col w-full">
+                            <div class="title flex gap-2 items-center">
+                                <i class="hgi hgi-stroke hgi-text-check font-bold text-2xl"></i>
+                                <h3 class="itemTitle text-lg">Recursos de Acessibilidade:</h3>
+                            </div>
+                            <ol class="w-full text-left text-sm list-disc pl-4">
+                                <li>Navegação direta com poucos toques</li>
+                                <li>Ícones e botões claros e grandes</li>
+                                <li>Tipografia legível e limpa</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="Item w-96 h-96 flex flex-col rounded-3xl justify-start items-center relative">
+                <!--Frente-->
+                <div
+                    class="justify-start gap-7 items-center flex flex-col w-full h-full backface-hidden absolute inset-0">
+                    <div class="imgPlace w-full h-44 pl-1.5 pr-1.5 ">
+                        <img src="./src/img/three.jpg" class="w-full h-full rounded-2xl shadow-inner object-cover"
+                            alt="">
+                    </div>
+                    <div class="textPlace w-full h-fit items-center flex justify-center flex-col gap-2">
+                        <h3 class="itemTitle text-xl">Bateria Inteligente</h3>
+                        <p class="itemDesc text-lg text-center">Gerencie o uso da bateria nos momentos certos e garanta
+                            energia mesmo quando o clima não ajuda.</p>
+                    </div>
+                </div>
+                <!--Verso-->
+                <div
+                    class=" justify-start gap-1 items-center flex flex-col w-full h-full backface-hidden rotate-y-180 inset-0 absolute">
+                    <div class="videoPlace w-full h-40 pl-1.5 pr-1.5">
+                        <video src="./src/videos/three.mp4" class="w-full h-full rounded-2xl object-cover shadow-inner"
+                            autoplay muted loop playsinline>></video>
+                    </div>
+                    <div class="textPlace w-full h-full items-start flex justify-center flex-col gap-1">
+                        <div class="q1 p-2 flex flex-col w-full">
+                            <div class="title flex gap-2 items-center">
+                                <i class="hgi hgi-stroke hgi-battery-charging-01 font-bold text-2xl"></i>
+                                <h3 class="itemTitle text-lg">Eficiência Na Hora Certa</h3>
+                            </div>
+                            <p class="itemDesc text-sm text-left">O sistema da bateria é inteligente e prioriza sempre a
+                                fonte de energia mais disponível, sem desperdícios.</p>
+                        </div>
+                        <div class="q1 p-2 flex flex-col w-full">
+                            <div class="title flex gap-2 items-center">
+                                <i class="hgi hgi-stroke hgi-bubble-chat-question font-bold text-2xl"></i>
+                                <h3 class="itemTitle text-lg text-nowrap">Como a bateria decide atuar?</h3>
+                            </div>
+                            <p class="itemDesc text-sm text-left">Quando não há energia solar ou eólica suficiente, a
+                                bateria é automaticamente ativada para garantir continuidade.</p>
+                        </div>
+                        <div class="q1 p-2 flex flex-col w-full">
+                            <div class="title flex gap-2 items-center">
+                                <i class="hgi hgi-stroke hgi-text-check font-bold text-2xl"></i>
+                                <h3 class="itemTitle text-lg">Benefícios:</h3>
+                            </div>
+                            <ol class="w-full text-left text-sm list-disc pl-4">
+                                <li>Ativação automática nos momentos críticos</li>
+                                <li>Desligamento programável para economia</li>
+                                <li>Acompanhamento de ciclos de carga</li>
+                                <li>Diagnóstico da saúde da bateria</li>
+                            </ol>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>

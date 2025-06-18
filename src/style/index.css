@@ -1,10 +1,81 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
 
 :root {
     --Azure: #029FFC;
     --BluishWhite: #89D3FF;
     --white70: #F3F3F3
+}
+
+@keyframes Element1 {
+    from {
+        top: -100px;
+        left: -100px;
+        opacity: 0;
+    }
+
+    to {
+        top: -10px;
+        left: -10px;
+        opacity: 1;
+    }
+}
+
+@keyframes Element2 {
+    from {
+        top: -100px;
+        right: -100px;
+        opacity: 0;
+    }
+
+    to {
+        top: -10px;
+        right: -10px;
+        opacity: 1;
+    }
+}
+
+@keyframes Element3 {
+    from {
+        bottom: -100px;
+        left: -100px;
+        opacity: 0;
+    }
+
+    to {
+        bottom: -10px;
+        left: -10px;
+        opacity: 1;
+    }
+}
+
+@keyframes Element4 {
+    from {
+        bottom: 350px;
+        right: -100px;
+        opacity: 0;
+    }
+
+    to {
+        bottom: 350px;
+        right: -10px;
+        opacity: 1;
+    }
+}
+
+@keyframes Element5 {
+    from {
+        bottom: -100px;
+        right: -100px;
+        opacity: 0;
+    }
+
+    to {
+        bottom: 0px;
+        right: -10px;
+        opacity: 1;
+    }
 }
 
 body {
@@ -17,6 +88,51 @@ body {
     height: 100dvh;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
+}
+
+.Brushs {
+    position: absolute;
+}
+
+#Element1 {
+    top: -10px;
+    left: -10px;
+    animation: Element1 0.9s ease-out;
+}
+
+#Element2 {
+    top: -10px;
+    right: -10px;
+    animation: Element2 0.9s ease-out;
+}
+
+#Element3 {
+    bottom: -10px;
+    left: -10px;
+    animation: Element3 0.9s ease-out;
+}
+
+#Element4 {
+    bottom: 350px;
+    right: -10px;
+    animation: Element4 0.9s ease-out;
+}
+
+#Element5 {
+    bottom: 0px;
+    right: -10px;
+    animation: Element5 0.9s ease-out;
+}
+
+#TeamContainer {
+    position: absolute;
+    display: none;
+    z-index: 1;
+}
+
+#TeamContainer.On {
+    display: inline-block;
 }
 
 #container {
@@ -24,17 +140,26 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    position: relative;
     width: 90%;
     height: 100%;
 }
 
-.Item{
+#container.blur {
+    filter: blur(4px);
+}
+
+.subTitle {
+    font-family: "Inria Sans", sans-serif;
+}
+
+.Item {
     background-color: var(--white70);
 }
 
 #GeeshName {
     font-family: "Raleway", sans-serif;
-    
+
 }
 
 .generic_button {
@@ -47,18 +172,35 @@ body {
     font-family: "Montserrat", sans-serif;
 }
 
-.generic_button:hover{
+.generic_button:hover {
     background-color: var(--Azure);
     border: 0.05px solid var(--BluishWhite);
     color: var(--white70);
 }
 
-.itemTitle{
+.Item {
+    perspective: 1000px;
+    transform-style: preserve-3d;
+    position: relative;
+    transform: rotateY(0deg);
+    transition: transform 0.35s ease-out, box-shadow 0.35s ease-out, height 0.35s ease-out;
+}
+
+.Item.hoverItem {
+    transform: rotateY(180deg);
+    height: 550px;
+    box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.rotateY-180 {
+    transform: rotateY(180deg);
+}
+
+.itemTitle {
     font-family: 'Montserrat';
     font-weight: bold;
 }
 
-.itemDesc{
-    text-align: center;
+.itemDesc {
     font-family: 'Montserrat';
 }
