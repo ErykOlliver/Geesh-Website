@@ -126,13 +126,13 @@ body {
 }
 
 #TeamContainer {
-    position: absolute;
     display: none;
+    position: absolute;
     z-index: 1;
 }
 
 #TeamContainer.On {
-    display: inline-block;
+    display: flex;
 }
 
 #container {
@@ -145,8 +145,17 @@ body {
     height: 100%;
 }
 
+.blueMark {
+    font-weight: bold;
+    color: var(--Azure);
+}
+
 #container.blur {
     filter: blur(4px);
+}
+
+.teamDesc {
+    font-family: "Inria Sans", sans-serif;
 }
 
 .subTitle {

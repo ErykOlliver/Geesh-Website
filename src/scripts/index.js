@@ -2,8 +2,8 @@ const CaptureItens = document.querySelectorAll(".Item");
 const TeamContainer = document.querySelector("#TeamContainer");
 const container = document.querySelector("#container");
 const Teambtn = document.querySelector("#Teambtn")
+const TeamClose = document.querySelector("#closeTeamContainer")
 
-TeamContainer.ariaDisabled = true
 
 CaptureItens.forEach(elem => {
     elem.addEventListener('mouseover', () => {
@@ -22,11 +22,14 @@ Teambtn.addEventListener("click", () => {
     TeamContainer.classList.add('On')
 })
 
-if (TeamContainer.className === 'On') {
-    document.addEventListener('click', (cl) => {
-        if (cl.className != 'On') {
-            alert('dfsfs')
-        }
-    })
-}
+TeamClose.addEventListener("click", () => {
+    container.classList.remove('blur')
+    TeamContainer.classList.remove('On')
+})
+
+/* 
+
+    Senha Netlify: Net1981FyEryk
+
+*/
 
