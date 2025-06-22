@@ -25,12 +25,6 @@ TeamClose.addEventListener("click", function () {
   container.classList.remove('blur');
   TeamContainer.classList.remove('On');
 });
-
-/* 
-
-    Senha Netlify: Net1981FyEryk
-
-*/
 /******/ })()
 ;
 //# sourceMappingURL=main.js.map

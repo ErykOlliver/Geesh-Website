@@ -4,7 +4,6 @@ const container = document.querySelector("#container");
 const Teambtn = document.querySelector("#Teambtn")
 const TeamClose = document.querySelector("#closeTeamContainer")
 
-
 CaptureItens.forEach(elem => {
     elem.addEventListener('mouseover', () => {
         elem.classList.add('hoverItem');
@@ -27,9 +26,4 @@ TeamClose.addEventListener("click", () => {
     TeamContainer.classList.remove('On')
 })
 
-/* 
-
-    Senha Netlify: Net1981FyEryk
-
-*/
 
